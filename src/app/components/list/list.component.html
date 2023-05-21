@@ -1,1 +1,8 @@
-<p>list works!</p>
+<div class="list">
+  <span
+    [ngClass]="{ active: vehicle.name === selectedVehicle()?.name }"
+    (click)="onVehicleSelect(vehicle.name)"
+    *ngFor="let vehicle of vehicles()"
+    >{{ vehicle.name }}</span
+  >
+</div>
