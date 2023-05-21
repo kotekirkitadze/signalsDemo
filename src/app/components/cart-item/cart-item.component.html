@@ -1,0 +1,15 @@
+<div style="border: 2px solid red; padding: 1rem">
+  <h2>Quantity</h2>
+  <select
+    [ngModel]="quantity()"
+    (change)="onQuantitySelected($any($event.target).value)"
+  >
+    <option disabled value="">--Select a Quantity--</option>
+    <option *ngFor="let q of qtyArr()">{{ q }}</option>
+  </select>
+</div>
+
+<div>Vehicle: {{ cartItem().vehicle.name }}</div>
+<div>Price: {{ cartItem().vehicle.price | number : "1.2-2" }}</div>
+
+<div style="font-weight: bold">Total: {{ exPrice() | number : "1.2-2" }}</div>

@@ -21,3 +21,12 @@ export interface Vehicle {
 export interface Film {
   title: string;
 }
+
+export interface Cart {
+  cartItems: CartItem[];
+}
+
+export interface CartItem {
+  vehicle: Vehicle;
+  quantity: number;
+}

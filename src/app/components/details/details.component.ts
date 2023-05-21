@@ -1,4 +1,6 @@
 import { Component, computed } from '@angular/core';
+import { Vehicle } from 'src/app/models/model';
+import { CartService } from 'src/app/services/cart.service';
 import { VehicleService } from 'src/app/services/vehicle.service';
 
 @Component({
@@ -12,5 +14,13 @@ export class DetailsComponent {
     this.selectedVehicle() ? `${this.selectedVehicle()?.name}` : ''
   );
   selectedVehicleFilms = this.vehicleService.vehicleFilms;
-  constructor(private vehicleService: VehicleService) {}
+  constructor(
+    private vehicleService: VehicleService,
+    private cartService: CartService
+  ) {}
+
+  addToCart(vehicle: Vehicle | undefined) {
+    if (!vehicle) return;
+    this.cartService.addToCart(vehicle);
+  }
 }
