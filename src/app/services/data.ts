@@ -1,4 +1,4 @@
-import { Vehicle } from '../moels/model';
+import { Vehicle } from '../models/model';
 
 export const Vehicles: Vehicle[] = [
   {

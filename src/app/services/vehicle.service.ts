@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { Film, Vehicle } from '../moels/model';
+import { Film, Vehicle } from '../models/model';
 import { forkJoin, of, switchMap, filter, Observable } from 'rxjs';
 import { Vehicles } from './data';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
