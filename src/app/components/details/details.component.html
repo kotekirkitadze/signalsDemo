@@ -1,1 +1,12 @@
-<p>details works!</p>
+<div *ngIf="selectedVehicle()" class="container">
+  <span>Name: {{ vehicleTitle() }}</span>
+  <span>Model: {{ selectedVehicle()?.model }}</span>
+
+  <span>Price: {{ selectedVehicle()?.price }}</span>
+  <ul class="container__films">
+    <h4>Films</h4>
+    <li *ngFor="let f of selectedVehicleFilms()">
+      {{ f.title }}
+    </li>
+  </ul>
+</div>

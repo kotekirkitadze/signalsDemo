@@ -26,4 +26,16 @@ export const Vehicles: Vehicle[] = [
     films: ['https://swapi.dev/api/films/3/'],
     price: 1000000000000,
   },
+  {
+    cargo_capacity: 50000,
+    crew: 1,
+    price: 100000,
+    name: 'Millennium Falcon',
+    model: 'YT-1300 light freighter',
+    manufacturer: 'Corellian Engineering Corporation',
+    cost_in_Credits: '100000',
+    passengers: 6,
+    vehicle_class: 'Light freighter',
+    films: ['https://swapi.dev/api/films/1/'],
+  },
 ];
